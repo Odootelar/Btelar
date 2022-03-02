@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+authorization_partner_credit_base,authorization.partner.credit,model_authorization_partner_credit,,1,1,1,1

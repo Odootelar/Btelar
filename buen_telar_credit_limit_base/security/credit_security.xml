@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="group_buen_telar_authorize_credits" model="res.groups">
+            <field name="name">Authorize Credits</field>
+        </record>
+
+    </data>
+</odoo>

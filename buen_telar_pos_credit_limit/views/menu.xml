@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem id="pos_menu_config_credit_limit_catalog"
+              name="Credit limit Catalog"
+              action="buen_telar_credit_limit_base.credit_limit_catalog_form_action"
+              parent="point_of_sale.menu_point_config_product"/>
+
+</odoo>

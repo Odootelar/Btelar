@@ -1,0 +1,227 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* buen_telar_credit_limit_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210119\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-28 18:04+0000\n"
+"PO-Revision-Date: 2022-01-28 12:12-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_attachment_count
+msgid "Attachment Count"
+msgstr "Cantidad de Adjuntos"
+
+#. module: buen_telar_credit_limit_base
+#: model:res.groups,name:buen_telar_credit_limit_base.group_buen_telar_authorize_credits
+msgid "Authorize Credits"
+msgstr "Autorizar Créditos"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__code
+msgid "Code"
+msgstr "Código"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model,name:buen_telar_credit_limit_base.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: buen_telar_credit_limit_base
+#: model_terms:ir.actions.act_window,help:buen_telar_credit_limit_base.credit_limit_catalog_form_action
+msgid "Create a new credit limit code."
+msgstr "Crear nuevo código de autorizo de crédito"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: buen_telar_credit_limit_base
+#: model_terms:ir.ui.view,arch_db:buen_telar_credit_limit_base.locach_view_partner_form_field
+msgid "Credit Informacion"
+msgstr "Información de Crédito"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.actions.act_window,name:buen_telar_credit_limit_base.credit_limit_catalog_form_action
+#: model_terms:ir.ui.view,arch_db:buen_telar_credit_limit_base.view_credit_limit_catalog_form
+#: model_terms:ir.ui.view,arch_db:buen_telar_credit_limit_base.view_credit_limit_catalog_tree
+msgid "Credit Limit Code"
+msgstr "Código de Crédito"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model,name:buen_telar_credit_limit_base.model_credit_limit_catalog
+msgid "Credit limit Catalog"
+msgstr "Catálogo de Códigos de Créditos"
+
+#. module: buen_telar_credit_limit_base
+#: model_terms:ir.ui.view,arch_db:buen_telar_credit_limit_base.locach_view_partner_form_field
+msgid "Credito Inicial"
+msgstr "Crédito Inicial"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__display_name
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nombre en pantalla"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores de canal"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__id
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,help:buen_telar_credit_limit_base.field_credit_limit_catalog__message_needaction
+#: model:ir.model.fields,help:buen_telar_credit_limit_base.field_credit_limit_catalog__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,help:buen_telar_credit_limit_base.field_credit_limit_catalog__message_has_error
+#: model:ir.model.fields,help:buen_telar_credit_limit_base.field_credit_limit_catalog__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog____last_update
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__write_date
+msgid "Last Updated on"
+msgstr "Última modificación el"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Archivo Principal"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensajes"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,help:buen_telar_credit_limit_base.field_credit_limit_catalog__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,help:buen_telar_credit_limit_base.field_credit_limit_catalog__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,help:buen_telar_credit_limit_base.field_credit_limit_catalog__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__name
+msgid "Title"
+msgstr "Título"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_res_partner__total_credit_consumed
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_res_users__total_credit_consumed
+msgid "Total Credit Consumed"
+msgstr "Crédito total consumido"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_res_partner__sale_verify_credit
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_res_users__sale_verify_credit
+msgid "Verify Credit?"
+msgstr "¿Verificar crédito?"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,field_description:buen_telar_credit_limit_base.field_credit_limit_catalog__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: buen_telar_credit_limit_base
+#: model:ir.model.fields,help:buen_telar_credit_limit_base.field_credit_limit_catalog__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"

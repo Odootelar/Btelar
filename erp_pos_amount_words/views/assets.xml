@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend_site" name="erp_pos_amount_words_assets" inherit_id="web.assets_backend">
+		    <xpath expr="." position="inside">
+                <script type="text/javascript" src="/erp_pos_amount_words/static/src/js/number_to_words.js" />
+		    </xpath>
+        </template>
+    </data>
+</openerp>
