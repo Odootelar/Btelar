@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_config_view_form_inherit_pos_credit_limit" model="ir.ui.view">
+        <field name="name">pos.config.form.inherit.pos.credit.limit</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form" />
+        <field name="arch" type="xml">
+            <div id="pricing" position="after">
+                <h2>Codigos de Creditos autorizados</h2>
+                <div class="row mt16">
+<!--                    <label string="Catalogo de creditos" for="credit_catalog_ids" class="col-lg-3 o_light_label"/>-->
+                    <field name="credit_catalog_ids" widget="many2many_tags" />
+                </div>
+            </div>
+        </field>
+    </record>
+
+    <record id="pos_order_form_inherit_credit_limit" model="ir.ui.view">
+        <field name="name">pos.order.form.inherit.credit.limit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <page name="extra" position="inside">
+                <group name="credit_limit" string="Informacion de limite de credito">
+                    <field name="credit_catalog_code"/>
+                    <field name="credit_limit_id" />
+                </group>
+            </page>
+
+        </field>
+    </record>
+</odoo>

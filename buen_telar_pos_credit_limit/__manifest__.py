@@ -15,10 +15,10 @@
         'point_of_sale',
     ],
     'data': [
-        # "security/ir.model.access.csv",
-        # "wizard/authorization_credit.xml",
+
         "views/templates.xml",
         "views/menu.xml",
+        "views/pos_credit_limit_views.xml",
     ],
     'qweb': [
         'static/src/xml/Popups/CreditInputPopup.xml',

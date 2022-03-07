@@ -27,8 +27,8 @@ class SaleOrder(models.Model):
     def action_confirm(self):
         for order in self.filtered(lambda so: not so.credit_limit_id):
             partner = order.partner_id
-            if partner.credit_limit < order.amount_total and partner.sale_verify_credit:
-                action = self.env.ref('buen_telar_sale_credit_limit.action_authorization_discount_line_wizard').read()[0]
+            if partner.credit_available < order.amount_total and partner.sale_verify_credit:
+                action = self.sudo().env.ref('buen_telar_sale_credit_limit.action_authorization_discount_line_wizard').read()[0]
                 return action
                 # raise ValidationError(_(
                 #     'You have been put on hold due to exceeding your credit limit. '
