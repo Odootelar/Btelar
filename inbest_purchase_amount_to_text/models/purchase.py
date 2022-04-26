@@ -35,19 +35,17 @@ class PurchaseOrder(models.Model):
 
         lang_code = self.env.user.lang or self.env.context.get('lang')
         lang = self.env['res.lang'].with_context(active_test=False).search([('code', '=', lang_code)])
-        if lang_code == 'en_US' or self.currency_id.name == 'USD':
-            amount_words = tools.ustr(_('{amt_value} AND {amt_decimal}/100 {amt_word}')).format(
-                amt_value=_num2words(integer_value, lang=lang.iso_code),
-                amt_decimal=fractional_value,
-                amt_word=self.currency_id.currency_unit_label,
-            )
+        if self.currency_id.name == 'USD':
+            value_unit = 'USD'
         else:
-            amount_words = tools.ustr(_('{amt_value} {amt_word} {amt_decimal}/100 M.N')).format(
-                amt_value=_num2words(integer_value, lang=lang.iso_code),
-                amt_decimal=fractional_value,
-                amt_word=self.currency_id.currency_unit_label,
-            )
+            value_unit = 'M.N'
+        amount_words = tools.ustr(_('{amt_value} {amt_word} {amt_decimal}/100 {amt_value_unit}')).format(
+            amt_value=_num2words(integer_value, lang=lang.iso_code),
+            amt_decimal=fractional_value,
+            amt_word=self.currency_id.currency_unit_label,
+            amt_value_unit=value_unit,
+        )
         amount_words = amount_words.upper()
         if lang_code == 'es_MX':
-            amount_words = amount_words.replace('DOLLARS', 'DOLARES').replace('AND', 'Y')
+            amount_words = amount_words.replace('DOLLARS', 'DOLARES')
         return amount_words.replace(" 0/", " 00/")
