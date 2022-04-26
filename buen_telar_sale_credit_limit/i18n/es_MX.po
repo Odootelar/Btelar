@@ -114,3 +114,64 @@ msgstr "Pedido de venta"
 #, python-format
 msgid "The credit to partner %s has been authorized."
 msgstr "El crédito al cliente %s ha sido autorizado."
+
+#. module: buen_telar_sale_credit_limit
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_authorization_partner_credit_wizard
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_credit_limit_warning_wizard
+msgid "ADVERTENCIA"
+msgstr "ADVERTENCIA"
+
+#. module: buen_telar_sale_credit_limit
+#: model:ir.model.fields,field_description:buen_telar_sale_credit_limit.field_sale_order__confirm
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_credit_limit_warning_wizard
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: buen_telar_sale_credit_limit
+#: model:ir.model,name:buen_telar_sale_credit_limit.model_credit_limit_warning
+msgid "Credit Limit Warning"
+msgstr "Advertencia"
+
+#. module: buen_telar_sale_credit_limit
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_credit_limit_warning_wizard
+msgid ""
+"EL MONTO DE LA  COTIZACIÓN EXCEDE EL VALOR DEL CRÉDITO DISPONIBLE PARA EL "
+"CLIENTE:"
+msgstr "El monto de la cotización excede el valor del crédito disponible para el cliente:"
+
+#. module: buen_telar_sale_credit_limit
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_authorization_partner_credit_wizard
+msgid ""
+"EL MONTO DE LA FACTURA QUE PRETENDE CONFIRMAR, EXCEDE EL VALOR DEL CRÉDITO "
+"DISPONIBLE PARA EL CLIENTE:"
+msgstr "El monto de la factura que pretende confirmar excede el valor del crédito disponible para el cliente:"
+
+#. module: buen_telar_sale_credit_limit
+#: model:ir.model.fields,field_description:buen_telar_sale_credit_limit.field_authorization_partner_credit__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: buen_telar_sale_credit_limit
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_authorization_partner_credit_wizard
+msgid ""
+"PARA CONTINUAR SE REQUIERE DEL PERSONAL CON ESTE PRIVILIEGIO, POR FAVOR "
+"LOCALICE UN USUARIO POR PERMISO DE AUTORIZO."
+msgstr "Para continuar se requiere del personal con este privilegio, por favor localice a un usuario con permiso de autorizo."
+
+#. module: buen_telar_sale_credit_limit
+#: model:ir.model.fields,field_description:buen_telar_sale_credit_limit.field_credit_limit_warning__order_id
+msgid "Sale Order"
+msgstr "Orden de venta"
+
+#. module: buen_telar_sale_credit_limit
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_credit_limit_warning_wizard
+msgid ""
+"USTED PODRÁ CONTINUAR PERO DEBE NOTIFICAR AL PERSONAL AUTORIZADO PARA "
+"ESTABLECER LOS LÍMITES DE CRÉDITO."
+msgstr "Usted podrá continuar pero debe notificar al personal autorizado para establecer los límites de crédito."
+
+#. module: buen_telar_sale_credit_limit
+#: model:ir.actions.act_window,name:buen_telar_sale_credit_limit.action_credit_limit_warning
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_credit_limit_warning_wizard
+msgid "Warning"
+msgstr "Advertencia"

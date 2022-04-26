@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="inbest_report_saleorder_document" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='so_total_summary']" position="after">
+            <span t-esc="doc.amount_to_text(doc.amount_total)"/>
+        </xpath>
+    </template>
+</odoo>
