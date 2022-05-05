@@ -36,8 +36,39 @@ class ResPartner(models.Model):
         for record in self:
             # si el credito disponible es negativo entonces es cero
             # si si se ha consumido mas del credito disponible entonces es cero
-            credit_available = record.credit_limit - record.total_credit_consumed + record.credit_payment
-            record.credit_available = 0 if credit_available <= 0 or record.total_credit_consumed > record.credit_limit else credit_available
+            # credit_available = record.credit_limit - record.total_credit_consumed + record.credit_payment
+            # record.credit_available = 0 if credit_available <= 0 or record.total_credit_consumed > record.credit_limit else credit_available
+            company_currency_id = record.company_id.currency_id or self.env.company.currency_id
+            # amount_payment_posted = 0.00
+            amount_invoice_posted = 0.00
+
+            # domain_payment = [
+            #     ('partner_id', '=', record.id),
+            #     ('partner_type', '=', 'customer'),
+            #     ('payment_type', '=', 'inbound'),
+            #     ('state', '=', 'posted')
+            # ]
+            # for payment in self.env['account.payment'].search(domain_payment):
+            #     if payment.currency_id.id == company_currency_id.id:
+            #         amount_payment_posted += payment.amount
+            #     else:
+            #         amount_payment_posted += payment.currency_id._convert(payment.amount, company_currency_id, payment.company_id, fields.Date.today(), round=False)
+
+            domain_invoice = [
+                ('partner_id', '=', record.id),
+                ('state', '=', 'posted'),
+                ('move_type', 'in', ('out_invoice', 'out_refund')),
+                ('payment_state', 'in', ('not_paid', 'in_payment', 'partial'))
+            ]
+
+            for invoice in self.env['account.move'].search(domain_invoice):
+                if invoice.currency_id.id == company_currency_id.id:
+                    amount_invoice_posted += invoice.amount_residual
+                else:
+                    amount_invoice_posted += invoice.currency_id._convert(invoice.amount_residual, company_currency_id, invoice.company_id, fields.Date.today(), round=False)
+
+            credit_available = record.credit_limit - amount_invoice_posted
+            record.credit_available = 0 if credit_available < 0 else credit_available
 
     def _credit_payment(self):
         if not self.ids:

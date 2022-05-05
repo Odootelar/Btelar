@@ -18,6 +18,7 @@
         "security/ir.model.access.csv",
         "wizard/authorization_credit.xml",
         "wizard/credit_limit_warning.xml",
+        "views/account_move_views.xml",
         "views/menu.xml",
     ],
     'installable': True,

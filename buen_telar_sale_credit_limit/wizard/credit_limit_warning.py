@@ -14,17 +14,17 @@ class CreditLimitWarning(models.TransientModel):
     @api.model
     def default_get(self, fields):
         vals = super(CreditLimitWarning, self).default_get(fields)
-        if self.env.context.get('active_model') == 'sale.order':
-            order = self.env['sale.order'].browse(self.env.context.get('active_id'))
-            if order:
-                vals['order_id'] = order.id
-                vals['partner_id'] = order.partner_id.id
+        if self.env.context.get('active_model') == 'account.move':
+            invoice = self.env['account.move'].browse(self.env.context.get('active_id'))
+            if invoice:
+                vals['invoice_id'] = invoice.id
+                vals['partner_id'] = invoice.partner_id.id
         return vals
 
-    order_id = fields.Many2one('sale.order', string='Sale Order')
+    invoice_id = fields.Many2one('account.move', string='Invoice')
     partner_id = fields.Many2one('res.partner', string='Customer')
 
-    def confirm(self):
-        self.order_id.write({'confirm': True,})
-        self.order_id.message_post(body=_("The credit to partner %s has been authorized.", self.order_id.partner_id.name))
-        self.order_id.action_confirm()
+    # def confirm(self):
+    #     self.order_id.write({'confirm': True,})
+    #     self.order_id.message_post(body=_("The credit to partner %s has been authorized.", self.order_id.partner_id.name))
+    #     self.order_id.action_confirm()

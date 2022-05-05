@@ -7,9 +7,9 @@
             <field name="model">authorization.partner.credit</field>
             <field name="arch" type="xml">
                 <form string="Authorization Partner Credit">
-                    <h1>ADVERTENCIA</h1>
-                    <p>EL MONTO DE LA FACTURA QUE PRETENDE CONFIRMAR, EXCEDE EL VALOR DEL CRÉDITO DISPONIBLE PARA EL CLIENTE: <strong class="text-uppercase"><field name="partner_id" readonly="1"/></strong>.</p>
-                    <p>PARA CONTINUAR SOLICITE AUTORIZACIÓN DEL DEPARTAMENTO DE CRÉDITO Y COBRANZA.</p>
+                    <h1>INFORMACIÓN</h1>
+                    <p>SE LE HA SOLICITADO EL AUTORIZO DEL LÍMITE DE CRÉDITO, PARA EL CLIENTE: <strong class="text-uppercase"><field name="partner_id" readonly="1"/></strong>.</p>
+                    <p>YA QUE EL VALOR DE LA FACTURA, EXCEDE EL VALOR CRÉDITO DISPONIBLE.</p>
                     <group>
                         <group>
                             <field name="invoice_id" readonly="1"

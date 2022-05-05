@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <!--  credit_limit.warning -->
         <record id="view_credit_limit_warning_wizard" model="ir.ui.view">
             <field name="name">Warning</field>
@@ -8,12 +7,11 @@
             <field name="arch" type="xml">
                 <form string="Warning">
                         <h1>ADVERTENCIA</h1>
-                        <p>EL MONTO DE LA  COTIZACIÓN EXCEDE EL VALOR DEL CRÉDITO DISPONIBLE PARA EL CLIENTE: <strong class="text-uppercase"><field name="partner_id" readonly="1"/></strong>.</p>
-                        <p>USTED PODRÁ CONTINUAR PERO DEBE NOTIFICAR AL DEPARTAMENTO DE CRÉDITO Y COBRANZA PARA LA AUTORIZACIÓN.</p>
+                        <p>El monto de la factura que pretende confirmar, excede el valor del crédito disponible para el cliente: <strong class="text-uppercase"><field name="partner_id" readonly="1"/></strong>.</p>
+                        <p>Para continuar se requiere de la autorización del departamento de Crédito y Cobranza.</p>
                     <footer>
-                        <button name="confirm" string="Confirm"
-                                groups="buen_telar_credit_limit_base.group_buen_telar_authorize_credits"
-                                type="object" class="btn-primary"/>
+<!--                        groups="buen_telar_credit_limit_base.group_buen_telar_authorize_credits"-->
+<!--                        <button name="confirm" string="Confirm"  type="object" class="btn-primary"/>-->
                         <button string="Close" class="btn-secondary" special="cancel"/>
                     </footer>
                 </form>

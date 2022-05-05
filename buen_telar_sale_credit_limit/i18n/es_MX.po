@@ -137,7 +137,7 @@ msgstr "Advertencia"
 msgid ""
 "EL MONTO DE LA  COTIZACIÓN EXCEDE EL VALOR DEL CRÉDITO DISPONIBLE PARA EL "
 "CLIENTE:"
-msgstr "El monto de la cotización excede el valor del crédito disponible para el cliente:"
+msgstr "EL MONTO DE LA  COTIZACIÓN EXCEDE EL VALOR DEL CRÉDITO DISPONIBLE PARA EL CLIENTE:"
 
 #. module: buen_telar_sale_credit_limit
 #: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_authorization_partner_credit_wizard

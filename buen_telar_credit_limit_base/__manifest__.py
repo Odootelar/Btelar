@@ -18,6 +18,7 @@
         "security/ir.model.access.csv",
         "views/credit_limit_views.xml",
         "views/res_partner_view.xml",
+
     ],
     'installable': True,
 }
