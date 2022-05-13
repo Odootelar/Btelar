@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<template id="picking_ticket_receipt_pdf_template_doc">
+			<t t-call="web.basic_layout">
+
+<!--				<div class="header" style="font-size:15px;">-->
+<!--					<div style="width:47%;float:left;">-->
+<!--						<span t-field="o.sale_id.date_order" />-->
+<!--					</div>-->
+<!--					<div style="width:53%;float:left;">-->
+<!--						<span t-field="o.origin" />-->
+<!--					</div>-->
+<!--				</div>-->
+				<div class="page" style="font-size:12px;">
+					<span t-set="company" t-value="o.company_id" />
+					<div class="text-center"><span t-esc="company.name" /></div>
+					<div class="pb-2 border-bottom border-dark text-center">
+						<div class="text-center pb-2" >
+							<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 45px;" alt="Logo"/>
+						</div>
+					</div>
+					<div><t t-if="company.street_name">Dr. <span t-esc="company.street_name"/></t>
+						<t t-if="company.street_number">No. <span t-esc="company.street_number"/></t>
+						<t t-if="company.l10n_mx_edi_colony">Col. <span t-esc="company.l10n_mx_edi_colony"/></t>
+					</div>
+					<div><t t-if="company.zip">C.P. <span t-esc="company.zip"/></t>
+						<t t-if="company.city"><span t-esc="company.city"/> </t>
+						<t t-if="company.state_id"><span t-esc="company.state_id.name"/> </t>
+						<t t-if="company.country_id"><span t-esc="company.country_id.name"/> </t>
+					</div>
+					<div><t t-if="company.phone">Telf. <span t-esc="company.phone"/></t>
+						<t t-if="company.fax">Fax. <span t-esc="company.fax"/></t>
+					</div>
+					<div><t t-if="company.vat">RFC. <span t-esc="company.vat"/></t>
+					</div>
+					<br/>
+					<div>Regimen General de Ley</div>
+					<div>Expedido en: <t t-if="company.city"><span t-esc="company.city"/></t>,<t t-if="company.state_id"><span t-esc="company.state_id.name"/></t></div>
+
+					<div class="row d-flex justify-content-between border-top border-dark pt-2 mt-2" >
+						<div class="col-4">Nota No.</div>
+						<div class="col-8 text-right"><t t-if="o.sale_id"><span t-field="o.sale_id.name" /></t></div>
+					</div>
+					<div class="row d-flex justify-content-between" >
+						<div class="col-4">Fecha:</div>
+						<div class="col-8 text-right"><span t-field="o.date_done" t-options="{'date_only': True}" /></div>
+					</div>
+					<div class="row d-flex justify-content-between" >
+						<div class="col-4">Hora:</div>
+						<div class="col-8 text-right"><span t-field="o.date_done" t-options="{'time_only': 'true', 'format': 'short'}"/></div>
+					</div>
+					<div class="row d-flex justify-content-between  border-bottom border-dark pb-2 mb-2" >
+						<div class="col-4">Atendido por:</div>
+						<div class="col-8 text-right"><t t-if="o.user_id"><span t-field="o.user_id" /></t></div>
+					</div>
+
+
+					<table width="100%" style="border-collapse:separate;border-spacing:0 4px;">
+						<tr style="text-decoration:underline">
+							<th>Cant.</th>
+							<th><div>Descripción del producto</div>
+								<div>Precio unitario</div>
+							</th>
+							<th class="text-right">Importe</th>
+						</tr>
+						<tr t-foreach="o.sale_id.order_line" t-as="line">
+							<td style="width:30%">
+								<span t-field="line.product_uom_qty" />
+								<span t-field="line.product_id.uom_id" />
+							</td>
+							<td style="width:48%">
+								<div><span t-field="line.with_context(display_default_code=False).product_id" /></div>
+								<div><span t-field="line.product_id.lst_price" /></div>
+							</td>
+							<td class="text-right" style="width:22%">
+								<span t-field="line.price_subtotal"		t-options="{'widget': 'monetary', }" />
+							</td>
+						</tr>
+					</table>
+
+					<table width="100%" style="border-collapse:separate;border-spacing:0px;margin-top:4px;">
+						<tr>
+							<td style="width:75%">Subtotal: </td>
+							<td style="width:25%" class="text-right"><span t-esc="o.sale_id.amount_total - o.sale_id.amount_tax"/></td>
+						</tr>
+						<!--								t-options="{'widget': 'monetary', }"
+						<tr t-foreach="o.sale_id.get_order_tax_value_in_receipt()"
+							t-as="taxdetail">
+							<td>
+								<span t-esc="taxdetail" />
+							</td>
+							<td class="text-right">
+								<span t-esc="taxdetail_value"									t-options="{'widget': 'monetary', }" />
+							</td>
+						</tr>-->
+						<tr t-if="o.sale_id">
+							<td>Descuento:</td>
+							<td class="text-right"><span t-esc="o.sale_id.total_price_reduce"/></td>
+						</tr>
+						<tr t-if="o.sale_id">
+							<td>Impuestos:</td>
+							<td class="text-right"><span t-esc="o.sale_id.amount_tax"	/></td>
+						</tr>
+						<tr style="font-size:20px">
+							<td>Total: </td>
+							<td class="text-right"><span t-field="o.sale_id.amount_total"  /></td>
+						</tr>
+					</table>
+					<br/>
+					<div class="text-center"><span t-esc="o.sale_id.amount_to_text(o.sale_id.amount_total)" /></div>
+					<br/>
+					<div class="text-center">COMPROBANTE SIMPLIFICADO INCLUIDO EN</div>
+					<div class="text-center">LA FACTURA GLOBAL DE VENTA DIARIA</div>
+					<div class="text-center"><t t-if="company.email">E-mail.<span t-esc="company.email"/></t></div>
+					<div class="text-center"><t t-if="company.website"><span t-esc="company.website"/></t></div>
+					<br/>
+					<div class="text-center">Gracias por su compra!!!</div>
+				</div>
+			</t>
+		</template>
+
+		<template id="picking_ticket_receipt_pdf_template">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t
+						t-call="inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc" />
+				</t>
+			</t>
+		</template>
+
+	</data>
+</odoo>
