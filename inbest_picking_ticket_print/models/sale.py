@@ -39,6 +39,21 @@ class SaleOrder(models.Model):
     total_price_reduce_taxexcl = fields.Float(compute='_get_price_reduce_all', string='Total Price Reduce tax included', digits='Product Price',
                                 readonly=True, store=True)
 
+    approved_by_id = fields.Many2one('res.users', string='Aprobado por', readonly=True, store=True, index=True, tracking=True)
+
+    def _prepare_confirmation_values(self):
+        return {
+            'state': 'sale',
+            'date_order': fields.Datetime.now(),
+            'approved_by_id': self.env.uid
+        }
+
+    def action_draft(self):
+        # al volver a borrador se debe eliminar el usuario que aprobo la cotizacion
+        self.write({'approved_by_id': False})
+        return super(SaleOrder, self).action_draft()
+
+
     def amount_to_text(self, amount):
         self.ensure_one()
 
@@ -90,12 +105,18 @@ class SaleOrder(models.Model):
     #             taxes_dict[each_line_tax['name']] += each_line_tax['amount']
     #     return taxes_dict
     #
-    # def get_total_discount_in_receipt(self):
-    #     total_discount = 0.0
-    #     for line in self.order_line:
-    #         if line.discount:
-    #             total_discount += (line.product_uom_qty * line.price_unit - line.price_subtotal)
-    #     return total_discount
+    def get_total_discount_in_receipt(self):
+        total_discount = 0.0
+        for line in self.order_line:
+            if line.discount:
+                total_discount += (line.product_uom_qty * line.price_unit - line.price_subtotal)
+        return total_discount
+
+    def get_total_before_discount_in_receipt(self):
+        total = 0.0
+        for line in self.order_line:
+            total += (line.product_uom_qty * line.price_unit)
+        return total
     #
     #
     #

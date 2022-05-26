@@ -123,7 +123,7 @@ msgstr "ADVERTENCIA"
 
 #. module: buen_telar_sale_credit_limit
 #: model:ir.model.fields,field_description:buen_telar_sale_credit_limit.field_sale_order__confirm
-#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.view_credit_limit_warning_wizard
+#: model_terms:ir.ui.view,arch_db:buen_telar_sale_credit_limit.invest_view_move_form
 msgid "Confirm"
 msgstr "Confirmar"
 

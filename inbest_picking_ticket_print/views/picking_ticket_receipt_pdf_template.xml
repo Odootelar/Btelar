@@ -13,7 +13,7 @@
 <!--						<span t-field="o.origin" />-->
 <!--					</div>-->
 <!--				</div>-->
-				<div class="page" style="font-size:14px;">
+				<div class="page" style="font-size:15px;">
 					<span t-set="company" t-value="o.company_id" />
 					<div class="text-center"><span t-esc="company.name" /></div>
 					<div class="pb-2 border-bottom border-dark text-center">
@@ -21,7 +21,7 @@
 							<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 45px;" alt="Logo"/>
 						</div>
 					</div>
-					<div><t t-if="company.street_name">Dr. <span t-esc="company.street_name"/></t>
+					<div><t t-if="company.street_name"><span t-esc="company.street_name"/></t>
 						<t t-if="company.street_number">No. <span t-esc="company.street_number"/></t>
 						<t t-if="company.l10n_mx_edi_colony">Col. <span t-esc="company.l10n_mx_edi_colony"/></t>
 					</div>
@@ -53,7 +53,7 @@
 					</div>
 					<div class="row d-flex justify-content-between  border-bottom border-dark pb-2 mb-2" >
 						<div class="col-4">Atendido por:</div>
-						<div class="col-8 text-right"><span t-field="user.name" /></div>
+						<div class="col-8 text-right"><span t-field="o.sale_id.approved_by_id.name" /></div>
 					</div>
 
 
@@ -88,7 +88,7 @@
 					<table width="100%" style="border-collapse:separate;border-spacing:0px;margin-top:4px;">
 						<tr>
 							<td style="width:75%">Subtotal: </td>
-							<td style="width:25%" class="text-right"><t t-if="o.sale_id"> <span t-esc="o.sale_id.amount_total - o.sale_id.amount_tax"/></t><t t-else="">Orden no definida</t> </td>
+							<td style="width:25%" class="text-right"><t t-if="o.sale_id"> <span t-esc="o.sale_id.get_total_before_discount_in_receipt()"/></t><t t-else="">Orden no definida</t> </td>
 						</tr>
 						<!--								t-options="{'widget': 'monetary', }"
 						<tr t-foreach="o.sale_id.get_order_tax_value_in_receipt()"
@@ -102,7 +102,7 @@
 						</tr>-->
 						<tr t-if="o.sale_id">
 							<td>Descuento:</td>
-							<td class="text-right"><span t-esc="o.sale_id.total_price_reduce"/></td>
+							<td class="text-right"><span t-esc="o.sale_id.get_total_discount_in_receipt()"/></td>
 						</tr>
 						<tr t-if="o.sale_id">
 							<td>Impuestos:</td>

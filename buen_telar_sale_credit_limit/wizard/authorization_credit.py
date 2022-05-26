@@ -64,11 +64,29 @@ class AuthorizationPartnerCredit(models.TransientModel):
             _logger.error("Exception while sending traceback by email: %s.\n.", e)
         pass
 
+    def send_notification_authorization_approve(self):
+        body = _("""Se ha autorizado la Factura del cliente: %(partner_name)s.
+                      - Importe de la factura: %(amount_total)s
+                    """, partner_name=self.invoice_id.partner_id.name,
+                 amount_total=self.invoice_id.amount_total, )
+        notification_ids = []
+        for partner in self.invoice_id.message_follower_ids.mapped('partner_id'):
+            notification_ids.append((0, 0, {
+                'res_partner_id': partner.id,
+                'notification_type': 'inbox'}))
+
+        self.invoice_id.message_post(body=body,
+                          message_type='notification',
+                          subtype_xmlid='mail.mt_comment',
+                          author_id=self.env.user.partner_id.id,
+                          notification_ids = notification_ids)
+
+
     def confirm(self):
         self.invoice_id.write({
             'credit_limit_id': self.credit_limit_id.id,
             'state': 'authorized',
         })
-        self.send_mail_authorization_approve()
-        self.invoice_id.message_post(body=_("The credit to partner %s has been authorized.", self.invoice_id.partner_id.name))
+        self.send_notification_authorization_approve()
+        # self.invoice_id.message_post(body=_("The credit to partner %s has been authorized.", self.invoice_id.partner_id.name))
         # self.invoice_id.action_post()

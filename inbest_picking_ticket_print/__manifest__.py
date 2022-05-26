@@ -19,6 +19,7 @@
     'data': [
         'views/report.xml',
         "views/res_company_view.xml",
+        "views/sale_order_view.xml",
         'views/picking_ticket_receipt_pdf_template.xml',
     ],
     'installable': True,

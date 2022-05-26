@@ -6,30 +6,30 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     sale_verify_credit = fields.Boolean(string="Verify Credit?")
-    total_credit_consumed = fields.Float(string="Total Credit Consumed", compute="_credit_consumed_total")
+    total_credit_consumed = fields.Float(string="Total Credit Consumed", compute="_credit_available")
     credit_available = fields.Float(string='Credit available', compute='_credit_available')
     credit_payment = fields.Float(string='Credit payment', compute='_credit_payment')
 
-    def _credit_consumed_total(self):
-        self.total_invoiced = 0
-        if not self.ids:
-            return True
-
-        all_partners_and_children = {}
-        all_partner_ids = []
-        for partner in self.filtered('id'):
-            # price_total is in the company currency
-            all_partners_and_children[partner] = self.with_context(active_test=False).search([('id', 'child_of', partner.id)]).ids
-            all_partner_ids += all_partners_and_children[partner]
-
-        domain = [
-            ('partner_id', 'in', all_partner_ids),
-            ('state', 'not in', ['draft', 'cancel']),
-            ('move_type', 'in', ('out_invoice', 'out_refund')),
-        ]
-        price_totals = self.env['account.move'].read_group(domain, ['amount_total'], ['partner_id'])
-        for partner, child_ids in all_partners_and_children.items():
-            partner.total_credit_consumed = sum(price['amount_total'] for price in price_totals if price['partner_id'][0] in child_ids)
+    # def _credit_consumed_total(self):
+    #     self.total_invoiced = 0
+    #     if not self.ids:
+    #         return True
+    #
+    #     all_partners_and_children = {}
+    #     all_partner_ids = []
+    #     for partner in self.filtered('id'):
+    #         # price_total is in the company currency
+    #         all_partners_and_children[partner] = self.with_context(active_test=False).search([('id', 'child_of', partner.id)]).ids
+    #         all_partner_ids += all_partners_and_children[partner]
+    #
+    #     domain = [
+    #         ('partner_id', 'in', all_partner_ids),
+    #         ('state', 'not in', ['open']),
+    #         ('move_type', 'in', ('out_invoice', 'out_refund')),
+    #     ]
+    #     price_totals = self.env['account.move'].read_group(domain, ['amount_total'], ['partner_id'])
+    #     for partner, child_ids in all_partners_and_children.items():
+    #         partner.total_credit_consumed = sum(price['amount_total'] for price in price_totals if price['partner_id'][0] in child_ids)
 
     @api.depends('total_credit_consumed', 'credit_limit', 'credit_payment')
     def _credit_available(self):
@@ -67,6 +67,7 @@ class ResPartner(models.Model):
                 else:
                     amount_invoice_posted += invoice.currency_id._convert(invoice.amount_residual, company_currency_id, invoice.company_id, fields.Date.today(), round=False)
 
+            record.total_credit_consumed = amount_invoice_posted
             credit_available = record.credit_limit - amount_invoice_posted
             record.credit_available = 0 if credit_available < 0 else credit_available
 
