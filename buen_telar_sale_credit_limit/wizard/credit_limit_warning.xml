@@ -7,12 +7,13 @@
             <field name="arch" type="xml">
                 <form string="Warning">
                         <h1>ADVERTENCIA</h1>
-                        <p>El monto de la factura que pretende confirmar, excede el valor del crédito disponible para el cliente: <strong class="text-uppercase"><field name="partner_id" readonly="1"/></strong>.</p>
-                        <p>Para continuar se requiere de la autorización del departamento de Crédito y Cobranza.</p>
+                        <p>El monto de la cotización que pretende confirmar, excede el valor del crédito disponible para el cliente: <strong class="text-uppercase"><field name="partner_id" readonly="1"/></strong>.</p>
+                        <p>Podrá continuar, pero para confirmar la facturación de dicha cotización se notificará al departamento de Crédito y Cobranza.</p>
                     <footer>
 <!--                        groups="buen_telar_credit_limit_base.group_buen_telar_authorize_credits"-->
-<!--                        <button name="confirm" string="Confirm"  type="object" class="btn-primary"/>-->
-                        <button string="Close" class="btn-secondary" special="cancel"/>
+                        <button name="confirm" string="Close"  type="object" class="btn-primary"/>
+
+<!--                        <button string="Close" class="btn-secondary" special="cancel"/>-->
                     </footer>
                 </form>
             </field>

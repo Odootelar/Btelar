@@ -19,14 +19,13 @@ class SaleOrder(models.Model):
     credit_limit_id = fields.Many2one('credit.limit.catalog', string='Credit Code')
     confirm = fields.Boolean(string='Confirm', default=False)
 
-    # def action_confirm(self):
-    #
-    #     for order in self.filtered(lambda so: not so.confirm):
-    #         partner = order.partner_id
-    #         if partner.credit_available < order.amount_total and partner.sale_verify_credit:
-    #             action = self.sudo().env.ref('buen_telar_sale_credit_limit.action_credit_limit_warning').read()[0]
-    #             return action
-    #     return super(SaleOrder, self).action_confirm()
+    def action_confirm(self):
+        for order in self.filtered(lambda so: not so.confirm):
+            partner = order.partner_id
+            if partner.credit_available < order.amount_total and partner.sale_verify_credit:
+                action = self.sudo().env.ref('buen_telar_sale_credit_limit.action_credit_limit_warning').read()[0]
+                return action
+        return super(SaleOrder, self).action_confirm()
 
 
 class SaleOrderLine(models.Model):

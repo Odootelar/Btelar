@@ -63,7 +63,7 @@ class AuthorizationPartnerCredit(models.TransientModel):
         except Exception as e:
             _logger.error("Exception while sending traceback by email: %s.\n.", e)
         pass
-
+    
     def send_notification_authorization_approve(self):
         body = _("""Se ha autorizado la Factura del cliente: %(partner_name)s.
                       - Importe de la factura: %(amount_total)s
