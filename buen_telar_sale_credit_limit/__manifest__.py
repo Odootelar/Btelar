@@ -20,6 +20,8 @@
         "wizard/credit_limit_warning.xml",
         "views/account_move_views.xml",
         "views/menu.xml",
+        "views/sale_order_views.xml",
+        "report/sale_report_templates.xml",
     ],
     'installable': True,
 }
