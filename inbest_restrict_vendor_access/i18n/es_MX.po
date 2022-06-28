@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* inbest_restrict_vendor_access
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-05 02:48+0000\n"
+"PO-Revision-Date: 2022-05-04 22:49-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: inbest_restrict_vendor_access
+#: model:ir.model,name:inbest_restrict_vendor_access.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: inbest_restrict_vendor_access
+#: model:ir.model.fields,field_description:inbest_restrict_vendor_access.field_res_partner__customer
+#: model:ir.model.fields,field_description:inbest_restrict_vendor_access.field_res_users__customer
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: inbest_restrict_vendor_access
+#: model:ir.model.fields,field_description:inbest_restrict_vendor_access.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nombre en pantalla"
+
+#. module: inbest_restrict_vendor_access
+#: model:ir.model.fields,field_description:inbest_restrict_vendor_access.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: inbest_restrict_vendor_access
+#: model:ir.model.fields,field_description:inbest_restrict_vendor_access.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: inbest_restrict_vendor_access
+#: model:ir.model.fields,field_description:inbest_restrict_vendor_access.field_res_partner__supplier
+#: model:ir.model.fields,field_description:inbest_restrict_vendor_access.field_res_users__supplier
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: inbest_restrict_vendor_access
+#: model:res.groups,name:inbest_restrict_vendor_access.group_supplier_manager
+msgid "Suppliers Manager"
+msgstr "Gestor de proveedores"

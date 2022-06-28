@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--  credit_limit.warning -->
+        <record id="view_credit_limit_warning_wizard" model="ir.ui.view">
+            <field name="name">Warning</field>
+            <field name="model">credit_limit.warning</field>
+            <field name="arch" type="xml">
+                <form string="Warning">
+                        <h1>ADVERTENCIA</h1>
+                        <p>El monto de la cotización que pretende confirmar, excede el valor del crédito disponible para el cliente: <strong class="text-uppercase"><field name="partner_id" readonly="1"/></strong>.</p>
+                        <p>Podrá continuar, pero para confirmar la facturación de dicha cotización se notificará al departamento de Crédito y Cobranza.</p>
+                    <footer>
+<!--                        groups="buen_telar_credit_limit_base.group_buen_telar_authorize_credits"-->
+                        <button name="confirm" string="Close"  type="object" class="btn-primary"/>
+
+<!--                        <button string="Close" class="btn-secondary" special="cancel"/>-->
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_credit_limit_warning" model="ir.actions.act_window">
+            <field name="name">Warning</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">credit_limit.warning</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+</odoo>

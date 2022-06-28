@@ -6,4 +6,16 @@
               action="buen_telar_credit_limit_base.credit_limit_catalog_form_action"
               parent="sale.menu_sale_config" groups="sales_team.group_sale_manager"/>
 
+    <menuitem id="sale_menu_need_authorization"
+              name="Facturas por autorizar"
+              action="action_account_move_tree_to_authorize"
+              groups="buen_telar_credit_limit_base.group_buen_telar_authorize_credits"
+              parent="account.menu_finance_receivables" sequence="1" />
+
+    <menuitem id="menu_sale_need_authorization"
+              name="Facturas por autorizar"
+            action="action_account_move_tree_to_authorize"
+            parent="sale.menu_sale_invoicing"
+            sequence="0" />
+
 </odoo>

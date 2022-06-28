@@ -1,0 +1,179 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* inbest_picking_ticket_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-04 20:05+0000\n"
+"PO-Revision-Date: 2022-05-04 16:06-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Atendido por:"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "C.P."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "COMPROBANTE SIMPLIFICADO INCLUIDO EN"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Cant."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Col."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Descripción / Precio"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Descuento:"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model:ir.model.fields,field_description:inbest_picking_ticket_print.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre en pantalla"
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Dr."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "E-mail."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Expedido en:"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Fax."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Fecha:"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Gracias por su compra!!!"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Hora:"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model:ir.model.fields,field_description:inbest_picking_ticket_print.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Importe"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Impuestos:"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "LA FACTURA GLOBAL DE VENTA DIARIA"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model:ir.model.fields,field_description:inbest_picking_ticket_print.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Logo"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "No."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Nota No."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model:ir.actions.report,name:inbest_picking_ticket_print.picking_ticket_receipt_pdf
+msgid "Picking Ticket Receipt"
+msgstr "Imprimir Ticket Orden de Entrega"
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "RFC."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Regimen General de Ley"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model:ir.model,name:inbest_picking_ticket_print.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de venta"
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Subtotal:"
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Telf."
+msgstr ""
+
+#. module: inbest_picking_ticket_print
+#: model:ir.model.fields,field_description:inbest_picking_ticket_print.field_sale_order__total_price_reduce
+msgid "Total Price Reduce"
+msgstr "Descuento"
+
+#. module: inbest_picking_ticket_print
+#: model:ir.model.fields,field_description:inbest_picking_ticket_print.field_sale_order__total_price_reduce_taxexcl
+#: model:ir.model.fields,field_description:inbest_picking_ticket_print.field_sale_order__total_price_reduce_taxinc
+msgid "Total Price Reduce tax included"
+msgstr "Descuento impuestos incluidos"
+
+#. module: inbest_picking_ticket_print
+#: model_terms:ir.ui.view,arch_db:inbest_picking_ticket_print.picking_ticket_receipt_pdf_template_doc
+msgid "Total:"
+msgstr ""

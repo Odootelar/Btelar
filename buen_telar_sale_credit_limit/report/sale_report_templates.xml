@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="external_layout_standard_inherit" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[@name='company_address']" position="after">
+            <div class="col-6 text-right" t-if="o._name == 'sale.order'">
+                <br/>
+                <p class="m-0">
+                    <strong>
+                        <span t-if="doc.state not in ['draft','sent']">Pedido:</span>
+                        <span t-if="doc.state in ['draft','sent']">Cotización:</span>
+                    </strong>
+                    <span t-field="doc.name"/>
+                </p>
+                <p class="m-0">
+                    <strong>Fecha:</strong>
+                    <span t-field="doc.date_order" t-options="{&quot;format&quot;: &quot;d/MM/y&quot;}"/>
+                </p>
+                <p class="m-0">
+                    <strong>Usuario:</strong>
+                    <span t-field="user.name"/>
+                </p>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//th[@name='th_description']" position="before">
+            <th name="th_quantity" position="move"/>
+            <th name="th_default_code" class="text-left">Clave</th>
+        </xpath>
+        <th name="th_quantity" position="attributes">
+            <attribute name="class" add="text-left" remove="text-right" separator=" "/>
+        </th>
+        <xpath expr="//td[@name='td_quantity']/span[@t-field='line.product_uom']" position="replace"/>
+        <xpath expr="//th[@name='th_priceunit']" position="before">
+            <th name="th_discount" position="move"/>
+        </xpath>
+        <xpath expr="//td[@name='td_name']" position="before">
+            <td name="td_quantity" position="move"/>
+            <td name="td_default_code"><span t-field="line.product_id.default_code"/></td>
+            <td t-if="display_discount" position="move"/>
+        </xpath>
+        <xpath expr="//td[@name='td_priceunit']" position="before">
+            <td t-if="display_discount" position="move"/>
+        </xpath>
+        <xpath expr="//th[@name='th_taxes']" position="replace"/>
+        <xpath expr="//td[@name='td_taxes']" position="replace"/>
+
+        <xpath expr="//t[@t-foreach='doc.amount_by_group']" position="replace"/>
+        <t t-set="address" position="replace"/>
+        <xpath expr="//h2[@class='mt16']" position="before">
+            <div class="row">
+                <div class="col-6 text-left">
+<!--                    <p class="m-0">-->
+<!--                        <strong>Cliente:</strong>-->
+<!--                        <span t-field="doc.partner_id.name"/>-->
+<!--                    </p>-->
+                    <p class="m-0">
+                        <span t-field="doc.partner_id" t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
+                    </p>
+                    <p class="m-0">
+                        <strong>RFC:</strong>
+                        <span t-field="doc.partner_id.vat"/>
+                    </p>
+                </div>
+                <div class="col-6 text-left">
+                    <p class="m-0">
+                        <strong>Vendedor:</strong>
+                        <span t-field="doc.user_id.name"/>
+                    </p>
+                    <p class="m-0">
+                        <strong>Clasificación:</strong>
+                        <span t-field="doc.tag_ids"/>
+                    </p>
+                </div>
+            </div>
+            <hr class="border-black"/>
+            <div class="row">
+                <div class="col-12 text-left">
+                    <p class="m-0">
+                        <strong>Dirección de Envío y/o Paquetería:</strong>
+                    </p>
+                    <p class="m-0">
+                        <span t-field="doc.delivery_address"/>
+                    </p>
+                </div>
+            </div>
+            <hr class="border-black"/>
+        </xpath>
+        <div id="informations" position="replace">
+            <div class="row mt32 mb32" id="informations">
+                <div class="col-6 text-left">
+                    <p class="m-0">
+                        <strong>Fecha de Entrega:</strong>
+                        <span t-field="doc.commitment_date" t-options='{"widget": "date"}'/>
+                    </p>
+                </div>
+                <div class="col-6 text-left">
+                    <p class="m-0">
+                        <strong>Referencia:</strong>
+                        <span t-field="doc.client_order_ref"/>
+                    </p>
+                </div>
+            </div>
+            <br/>
+        </div>
+        <h2 class="mt16" position="replace"/>
+
+        <t t-set="current_subtotal" position="after">
+            <t t-set="subtotal" t-value="0.00"/>
+        </t>
+
+        <xpath expr="//td[@name='td_subtotal']" position="replace">
+            <td name="td_subtotal" class="text-right o_price_total">
+                <t t-set="subtotal_line" t-value="line.product_uom_qty * line.price_unit"/>
+                <t t-set="subtotal" t-value="subtotal + subtotal_line"/>
+                <span t-esc="subtotal_line" t-options='{"widget": "float", "precision": 2}'/>
+            </td>
+        </xpath>
+
+        <xpath expr="//tr[@class='border-black o_subtotal']" position="replace">
+            <tr class="border-black o_subtotal" style="">
+                <td name="td_amount_untaxed_label"><strong>Subtotal</strong></td>
+                <td name="td_amount_untaxed" class="text-right">
+                    <span t-esc="subtotal" t-options='{"widget": "float", "precision": 2}'/>
+                </td>
+            </tr>
+            <tr style="">
+                <td name="td_amount_untaxed_label"><strong>Descuento</strong></td>
+                <td name="td_amount_untaxed" class="text-right">
+                    <span t-field="doc.price_reduce"/>
+                </td>
+            </tr>
+            <tr style="">
+                <td name="td_amount_untaxed_label"><strong>I.V.A</strong></td>
+                <td name="td_amount_untaxed" class="text-right">
+                    <span t-field="doc.amount_tax"/>
+                </td>
+            </tr>
+        </xpath>
+
+        <xpath expr="//div[@name='so_total_summary']" position="after">
+            <span t-field="doc.note_sale"/>
+            <br/><br/>
+        </xpath>
+
+    </template>
+</odoo>

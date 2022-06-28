@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="picking_ticket_receipt_pdf" model="ir.actions.report">
+		<field name="name">Picking Ticket Receipt</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">inbest_picking_ticket_print.picking_ticket_receipt_pdf_template</field>
+		<field name="report_file">inbest_picking_ticket_print.picking_ticket_receipt_pdf_template</field>
+		<field name="model">stock.picking</field>
+		<field name="binding_model_id" ref="stock.model_stock_picking"/>
+		<field name="binding_type">report</field>
+	</record>
+
+	<record id="paperformat_picking_ticket_receipt_pdf_report" model="report.paperformat">
+		<field name="name">Picking Ticket Receipt - PDF</field>
+		<field name="default" eval="True" />
+		<field name="format">custom</field>
+		<field name="page_height">370</field>
+		<field name="page_width">110</field>
+		<field name="orientation">Portrait</field>
+		<field name="margin_top">11</field>
+		<field name="margin_bottom">1</field>
+		<field name="margin_left">1</field>
+		<field name="margin_right">1</field>
+		<field name="header_line" eval="False" />
+		<field name="header_spacing">7</field>
+		<field name="dpi">90</field>
+		<field name="report_ids"
+			eval="[(6,0,[ref('inbest_picking_ticket_print.picking_ticket_receipt_pdf')])]" />
+	</record>
+
+</odoo>

@@ -7,16 +7,12 @@
             <field name="model">authorization.partner.credit</field>
             <field name="arch" type="xml">
                 <form string="Authorization Partner Credit">
+                    <h1>INFORMACIÓN</h1>
+                    <p>SE LE HA SOLICITADO EL AUTORIZO DEL LÍMITE DE CRÉDITO, PARA EL CLIENTE: <strong class="text-uppercase"><field name="partner_id" readonly="1"/></strong>.</p>
+                    <p>YA QUE EL VALOR DE LA FACTURA, EXCEDE EL VALOR CRÉDITO DISPONIBLE.</p>
                     <group>
                         <group>
-                            <div class="oe_grey" colspan="4">
-                               Customer <strong><field name="partner_id" readonly="1" options="{'no_create': True, 'no_open': True}" force_save="1"/></strong>, does not have available credit, needs to be authorized.
-                            </div>
-                        </group>
-                    </group>
-                    <group>
-                        <group>
-                            <field name="order_id" readonly="1"
+                            <field name="invoice_id" readonly="1"
                                    options="{'no_create': True, 'no_open': True}"
                                    force_save="1"/>
                         </group>
@@ -27,10 +23,10 @@
                         </group>
                     </group>
                     <footer>
-                        <button name="confirm" string="Authorize"
+                        <button name="confirm" string="Autorizar"
                                 groups="buen_telar_credit_limit_base.group_buen_telar_authorize_credits"
                                 type="object" class="btn-primary"/>
-                        <button string="Close" class="btn-secondary" special="cancel"/>
+                        <button string="Cerrar" class="btn-secondary" special="cancel"/>
                     </footer>
                 </form>
             </field>
