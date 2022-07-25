@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="movement_period_view_search" model="ir.ui.view">
+            <field name="name">movement.period.view.search</field>
+            <field name="model">movement.period.report</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="document"/>
+                    <field name="name"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Partner" name="group_by_partner" domain="[]" context="{'group_by': 'partner_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="movement_period_tree_view" model="ir.ui.view">
+            <field name="name">movement.period.tree</field>
+            <field name="model">movement.period.report</field>
+            <field name="arch" type="xml">
+                <tree string="Movement period" create="0" edit="0" delete="0" >
+                    <field name="document"/>
+                    <field name="partner_id"/>
+                    <field name="name"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="total_move"/>
+                    <field name="total_payment"/>
+                    <field name="days"/>
+                    <field name="classification"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="movement_period_action" model="ir.actions.act_window">
+            <field name="name">Report of Movements by Period</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">movement.period.report</field>
+            <field name="view_mode">tree</field>
+            <field name="search_view_id" ref="movement_period_view_search"/>
+            <field name="context">{'search_default_group_by_partner': 1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent">
+                   No records found.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
