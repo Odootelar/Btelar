@@ -20,7 +20,10 @@
             <field name="name">movement.period.tree</field>
             <field name="model">movement.period.report</field>
             <field name="arch" type="xml">
-                <tree string="Movement period" create="0" edit="0" delete="0" >
+                <tree string="Movement period" decoration-info="move_type == 'out_invoice'">
+                    <field name="move_type" invisible="True"/>
+<!--                    <field name="reference" groups="base.group_no_one"/>-->
+                    <field name="to_order" invisible="True"/>
                     <field name="document"/>
                     <field name="partner_id"/>
                     <field name="name"/>
