@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="erp_mx_edi_view_picking_type_form_inherit_mrp" model="ir.ui.view">
+        <field name="name">MX EDI Operation Types</field>
+        <field name="model">stock.picking.type</field>
+        <field name="inherit_id" ref="stock.view_picking_type_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='show_operations']" position="after">
+                <field name="l10n_mx_invoice_internal_transfer"/>
+                <field name="rfc_generic_invoice_transfer"
+                attrs="{'invisible':[('l10n_mx_invoice_internal_transfer', '=', False)], 'required':[('l10n_mx_invoice_internal_transfer', '=', True)]}"/>
+                <field name="fiscal_regime_rfc_generic_invoice_transfer"
+                attrs="{'invisible':[('l10n_mx_invoice_internal_transfer', '=', False)], 'required':[('l10n_mx_invoice_internal_transfer', '=', True)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="erp_mx_edi_view_picking_edi_form" model="ir.ui.view">
+        <field name="model">stock.picking</field>
+        <field name="name">MX EDI stock.picking.edi.form</field>
+        <field name="inherit_id" ref="l10n_mx_edi_stock.view_picking_edi_form"/>
+        <field name="arch" type="xml">
+            <field name="l10n_mx_edi_transport_type" position="after">
+                <field name="l10n_mx_invoice_internal_transfer" invisible="1" force_save="1"/>
+            </field>
+            <field name="l10n_mx_edi_transport_type" position="attributes">
+                <attribute name="attrs">{"invisible": [("country_code", "!=", "MX")], "required": [("l10n_mx_invoice_internal_transfer", "=", True)]}</attribute>
+            </field>
+            <button name="l10n_mx_edi_action_cancel_delivery_guide" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', ('l10n_mx_edi_status', '!=', 'sent'), ('l10n_mx_invoice_internal_transfer', '=', True)]}</attribute>
+            </button>
+            <button name="l10n_mx_edi_action_send_delivery_guide" position="after">
+                <button
+                    name="l10n_mx_edi_action_send_delivery_guide"
+                    type="object"
+                    string="Transfer Invoice"
+                    attrs="{'invisible':['|', '|','|',
+                                        ('state', '!=', 'done'),
+                                        ('l10n_mx_invoice_internal_transfer', '=', False),
+                                        ('l10n_mx_edi_transport_type', '!=', '00'),
+                                        ('l10n_mx_edi_status', 'not in', [False, 'cancelled'])]}"/>
+            </button>
+            <button name="l10n_mx_edi_action_cancel_delivery_guide" position="after">
+                <button
+                    name="l10n_mx_edi_action_cancel_transfer_invoice"
+                    type="object"
+                    string="Cancel Transfer Invoice"
+                    attrs="{'invisible': ['|','|',
+                                          ('l10n_mx_edi_status', '!=', 'sent'),
+                                          ('l10n_mx_edi_transport_type', '!=', '00'),
+                                          ('l10n_mx_invoice_internal_transfer', '=', False),
+                                          ('l10n_mx_edi_status', '!=', 'sent')]}"/>
+            </button>
+        </field>
+    </record>
+</odoo>

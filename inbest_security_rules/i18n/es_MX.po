@@ -1,0 +1,267 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* inbest_security_rules
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20220101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-08 03:56+0000\n"
+"PO-Revision-Date: 2022-09-07 23:58-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Approve Order"
+msgstr "Aprobar pedido"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid ""
+"Are you sure you want to void the authorized transaction? This action can't "
+"be undone."
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.group_account_bill_collector
+msgid "Bill collector"
+msgstr "Crédito y cobranza"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Capture Transaction"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Confirm Order"
+msgstr "Confirmar pedido"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Confirm Receipt Date"
+msgstr "Confirmar la fecha de recepción"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Create Bill"
+msgstr "Crear factura"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Create Invoice"
+msgstr "Crear Factura"
+
+#. module: inbest_security_rules
+#: model:ir.model.fields,field_description:inbest_security_rules.field_purchase_order__display_name
+msgid "Display Name"
+msgstr "Nombre en pantalla"
+
+#. module: inbest_security_rules
+#: model:ir.model.fields,field_description:inbest_security_rules.field_purchase_order__id
+msgid "ID"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:ir.model.fields,field_description:inbest_security_rules.field_purchase_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Lock"
+msgstr "Bloquear"
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_crm_group
+msgid "Permiso CRM"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_expense_group
+msgid "Permiso Expense"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_hr_group
+msgid "Permiso HR"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Print RFQ"
+msgstr "Imprimir SdP"
+
+#. module: inbest_security_rules
+#: model:ir.model,name:inbest_security_rules.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de compra"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Re-Send by Email"
+msgstr "Reenviar por correo electrónico"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Send PO by Email"
+msgstr "Enviar PC por correo electrónico"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Send PRO-FORMA Invoice"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Send by Email"
+msgstr "Enviar por correo electrónico"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Set to Draft"
+msgstr "Establecer a borrador"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Set to Quotation"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_group_partner_user
+msgid "Solo crear y consultar contactos"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Unlock"
+msgstr "Desbloquear"
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.group_purchase_user_restrict
+#: model:res.groups,name:inbest_security_rules.group_stock_user_restrict
+msgid "User restrict"
+msgstr "Usuario restringido"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Void Transaction"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.group_stock_user_only_product
+msgid "Read only product"
+msgstr "Solo leer productos"
+
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid "The Bill/Refund date is required to validate this document."
+msgstr "Se requiere la fecha de Facturación / Reembolso para validar este documento."
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid "The entry %s (id %s) is already posted."
+msgstr "El asiento %s (id %s) ya está publicado."
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid ""
+"The field 'Customer' is required, please complete it to validate the "
+"Customer Invoice."
+msgstr "El campo 'Cliente' es obligatorio, complétalo para validar la factura del "
+"cliente."
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid ""
+"The field 'Vendor' is required, please complete it to validate the Vendor "
+"Bill."
+msgstr "El campo 'Proveedor' es obligatorio, complétalo para validar la factura del "
+"proveedor."
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid ""
+"The recipient bank account link to this invoice is archived.\n"
+"So you cannot confirm the invoice."
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,comment:inbest_security_rules.inbest_group_sale_user
+msgid ""
+"The user will only have access to create quotations on sales application."
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,comment:inbest_security_rules.inbest_group_sale_user_edit
+msgid ""
+"The user will only have access to edit quotations on sales application."
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,comment:inbest_security_rules.inbest_group_sale_user_read_only
+msgid ""
+"The user will only have access to read quotations on sales application."
+msgstr ""
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid "This move is configured to be auto-posted on %s"
+msgstr ""
+"Este movimiento está configurado para publicarse automáticamente en %s"
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid "This move will be posted at the accounting date: %(date)s"
+msgstr "Este movimiento se publicará en la fecha contable: %(date)s"
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot validate an invoice with a negative total amount. You should "
+"create a credit note instead. Use the action menu to transform it into a "
+"credit note or refund."
+msgstr ""
+"No puede validar una factura con un importe total negativo. En su lugar, "
+"debe crear una factura rectificativa. Use el menú de acciones para "
+"transformarlo en una factura rectificativa/reembolso."
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid "You don't have the access rights to post an invoice."
+msgstr "No tienes los derechos de acceso para contabilizar una factura."
+
+#. module: inbest_security_rules
+#: code:addons/inbest_security_rules/models/account_move.py:0
+#, python-format
+msgid "You need to add a line before posting."
+msgstr "Necesita añadir líneas antes de validar."

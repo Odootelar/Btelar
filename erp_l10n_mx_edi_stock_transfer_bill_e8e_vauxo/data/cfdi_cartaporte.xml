@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="cfdi_cartaporte_comex_invoice_transfer" inherit_id="l10n_mx_edi_stock.cfdi_cartaporte">
+
+        <xpath expr="//*[name()='cfdi:Receptor']" position="attributes">
+                <attribute name="t-att-Rfc">supplier.vat if not record.sudo().l10n_mx_invoice_internal_transfer and record.sudo().l10n_mx_edi_transport_type != '00' else record.sudo().picking_type_id.rfc_generic_invoice_transfer</attribute>
+        </xpath>
+
+    </template>
+
+    <template id="cfdi_cartaporte_comex_40_invoice_transfer" inherit_id="l10n_mx_edi_stock_40.cfdi_cartaporte_40">
+
+         <xpath expr="//*[name()='cfdi:Receptor']" position="attributes">
+                <attribute name="t-att-Rfc">supplier.vat if not record.sudo().l10n_mx_invoice_internal_transfer and record.sudo().l10n_mx_edi_transport_type != '00' else record.sudo().picking_type_id.rfc_generic_invoice_transfer</attribute>
+                <attribute name="t-att-RegimenFiscalReceptor">supplier.l10n_mx_edi_fiscal_regime if not record.sudo().l10n_mx_invoice_internal_transfer and record.sudo().l10n_mx_edi_transport_type != '00' else record.sudo().picking_type_id.fiscal_regime_rfc_generic_invoice_transfer</attribute>
+        </xpath>
+
+    </template>
+
+
+</odoo>
