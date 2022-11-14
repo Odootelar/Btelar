@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id="view_invoice_tree_inherit" model="ir.ui.view">
+         <field name="name">account.invoice.tree.inherit</field>
+         <field name="model">account.move</field>
+         <field name="inherit_id" ref="account.view_invoice_tree" />
+         <field name="arch" type="xml">
+
+                <xpath expr="//tree/header/button[@name='action_register_payment']" position="attributes">
+                    <attribute name="groups">account.group_account_user,inbest_security_rules.group_account_bill_collector</attribute>
+                </xpath>
+         </field>
+    </record>
+
+    <record id="view_move_form_inherit" model="ir.ui.view">
+         <field name="name">account.invoice.tree.inherit</field>
+         <field name="model">account.move</field>
+         <field name="inherit_id" ref="account.view_move_form" />
+         <field name="arch" type="xml">
+
+                <xpath expr="//form/header/button[@name='action_register_payment']" position="attributes">
+                    <attribute name="groups">account.group_account_user,inbest_security_rules.group_account_bill_collector</attribute>
+                </xpath>
+         </field>
+    </record>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_movement_period_report,access.movement.period.report,model_movement_period_report,account.group_account_manager,1,1,1,1
+access_movement_period_wizard,access.movement.period.wizard,model_movement_period_wizard,account.group_account_manager,1,1,1,1
