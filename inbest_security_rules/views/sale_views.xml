@@ -18,11 +18,11 @@
                             attrs="{'invisible': [('authorized_transaction_ids', '=', [])]}"/>
                     <button name="%(sale.action_view_sale_advance_payment_inv)d" string="Create Invoice"
                         type="action" class="btn-primary"
-                        attrs="{'invisible': [('invoice_status', '!=', 'to invoice')]}" groups="sales_team.group_sale_manager"/>
+                        attrs="{'invisible': [('invoice_status', '!=', 'to invoice')]}" groups="sales_team.group_sale_manager,inbest_security_rules.group_account_bill_collector"/>
                     <button name="%(sale.action_view_sale_advance_payment_inv)d" string="Create Invoice"
                         type="action" context="{'default_advance_payment_method': 'percentage'}"
                         attrs="{'invisible': ['|',('invoice_status', '!=', 'no'), ('state', '!=', 'sale')]}"
-                        groups="sales_team.group_sale_manager"/>
+                        groups="sales_team.group_sale_manager,inbest_security_rules.group_account_bill_collector"/>
                     <button name="action_quotation_send" string="Send by Email" type="object" states="draft" class="btn-primary"/>
                     <button name="action_quotation_send" type="object" string="Send PRO-FORMA Invoice"
                       groups="sale.group_proforma_sales" class="btn-primary"

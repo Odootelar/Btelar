@@ -140,3 +140,13 @@ class AccountMove(models.Model):
         to_post._check_balanced()
         return to_post
 
+
+class AccountPaymentRegister(models.TransientModel):
+    _inherit = 'account.payment.register'
+
+    def _create_payments(self):
+        payments = super(AccountPaymentRegister, self.sudo())._create_payments()
+
+        return payments
+
+

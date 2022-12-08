@@ -31,4 +31,16 @@ class Picking(models.Model):
     def l10n_mx_edi_action_cancel_transfer_invoice(self):
         self.l10n_mx_edi_action_cancel_delivery_guide()
 
+    def button_print(self):
+        self.ensure_one()
+        if self.l10n_mx_invoice_internal_transfer and self.picking_type_id.code == 'internal':
+            action = self.env.ref('erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.action_report_delivery_to_invoice').report_action(self, config=False)
+        else:
+            action = self.env.ref('(stock.action_report_delivery').report_action(self, config=False)
+        return action
 
+
+class StockMove(models.Model):
+    _inherit = "stock.move"
+
+    cost_destiny_ids = fields.Many2many('stock.landed.cost', string='Cost Destiny')

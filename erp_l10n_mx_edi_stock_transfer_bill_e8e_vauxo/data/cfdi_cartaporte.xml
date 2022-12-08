@@ -6,6 +6,14 @@
                 <attribute name="t-att-Rfc">supplier.vat if not record.sudo().l10n_mx_invoice_internal_transfer and record.sudo().l10n_mx_edi_transport_type != '00' else record.sudo().picking_type_id.rfc_generic_invoice_transfer</attribute>
         </xpath>
 
+        <xpath expr="//*[name()='cfdi:Concepto']" position="inside">
+            <t t-foreach="move.cost_destiny_ids" t-as="cost_destiny" t-if="record.l10n_mx_invoice_internal_transfer and move.cost_destiny_ids">
+                    <cfdi:InformacionAduanera
+                    xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+                    t-att-NumeroPedimento="cost_destiny.l10n_mx_edi_customs_number" />
+                </t>
+        </xpath>
+
     </template>
 
     <template id="cfdi_cartaporte_comex_40_invoice_transfer" inherit_id="l10n_mx_edi_stock_40.cfdi_cartaporte_40">
@@ -13,6 +21,13 @@
          <xpath expr="//*[name()='cfdi:Receptor']" position="attributes">
                 <attribute name="t-att-Rfc">supplier.vat if not record.sudo().l10n_mx_invoice_internal_transfer and record.sudo().l10n_mx_edi_transport_type != '00' else record.sudo().picking_type_id.rfc_generic_invoice_transfer</attribute>
                 <attribute name="t-att-RegimenFiscalReceptor">supplier.l10n_mx_edi_fiscal_regime if not record.sudo().l10n_mx_invoice_internal_transfer and record.sudo().l10n_mx_edi_transport_type != '00' else record.sudo().picking_type_id.fiscal_regime_rfc_generic_invoice_transfer</attribute>
+        </xpath>
+        <xpath expr="//*[name()='cfdi:Concepto']" position="inside">
+            <t t-foreach="move.cost_destiny_ids" t-as="cost_destiny" t-if="record.l10n_mx_invoice_internal_transfer and move.cost_destiny_ids">
+                    <cfdi:InformacionAduanera
+                    xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+                    t-att-NumeroPedimento="cost_destiny.l10n_mx_edi_customs_number" />
+                </t>
         </xpath>
 
     </template>

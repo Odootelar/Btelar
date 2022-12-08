@@ -9,12 +9,12 @@
                 <header>
                     <button name="action_rfq_send" states="draft" string="Send by Email" type="object" context="{'send_rfq':True}" class="oe_highlight" groups="purchase.group_purchase_user"/>
                     <button name="print_quotation" string="Print RFQ" type="object" states="draft" class="oe_highlight" groups="purchase.group_purchase_user"/>
-                    <button name="button_confirm" type="object" states="sent" string="Confirm Order" class="oe_highlight" id="bid_confirm" groups="purchase.group_purchase_manager"/>
+                    <button name="button_confirm" type="object" states="sent" string="Confirm Order" class="oe_highlight" id="bid_confirm" groups="purchase.group_purchase_manager,inbest_security_rules.inbest_group_user_warehouse"/>
                     <button name="button_approve" type="object" states='to approve' string="Approve Order" class="oe_highlight" groups="purchase.group_purchase_manager"/>
                     <button name="action_create_invoice" string="Create Bill" type="object" class="oe_highlight" context="{'create_bill':True}" attrs="{'invisible': ['|', ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'in', ('no', 'invoiced'))]}" groups="purchase.group_purchase_user"/>
                     <button name="action_rfq_send" states="sent" string="Re-Send by Email" type="object" context="{'send_rfq':True}" groups="purchase.group_purchase_user"/>
                     <button name="print_quotation" string="Print RFQ" type="object" states="sent" groups="base.group_user" />
-                    <button name="button_confirm" type="object" states="draft" string="Confirm Order" id="draft_confirm" groups="purchase.group_purchase_manager"/>
+                    <button name="button_confirm" type="object" states="draft" string="Confirm Order" id="draft_confirm" groups="purchase.group_purchase_manager,inbest_security_rules.inbest_group_user_warehouse"/>
                     <button name="action_rfq_send" states="purchase" string="Send PO by Email" type="object" context="{'send_rfq':False}" groups="purchase.group_purchase_user"/>
                     <button name="confirm_reminder_mail" string="Confirm Receipt Date" type="object" attrs="{'invisible': ['|','|', ('state', 'not in', ('purchase', 'done')), ('mail_reminder_confirmed', '=', True), ('date_planned', '=', False)]}" groups="base.group_no_one"/>
                     <button name="action_create_invoice" string="Create Bill" type="object" context="{'create_bill':True}" attrs="{'invisible': ['|', '|', ('state', 'not in', ('purchase', 'done')), ('invoice_status', 'not in', ('no', 'invoiced')), ('order_line', '=', [])]}" groups="purchase.group_purchase_user"/>
