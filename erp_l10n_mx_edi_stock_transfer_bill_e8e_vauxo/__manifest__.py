@@ -10,10 +10,12 @@
     "depends": [
         "base",
         "l10n_mx_edi_stock_extended_40",
+        "l10n_mx_edi_landing"
     ],
     "data": [
         'data/cfdi_cartaporte.xml',
         "views/stock_picking_views.xml",
+        'reports/report_stockpicking_invoice.xml',
     ],
     "installable": True,
 }

@@ -13,8 +13,12 @@
 			<field eval="[(6, 0, [ref('inbest_security_rules.inbest_crm_group')])]" name="groups_id"/>
 		</record>
 
+		<record id="sale.product_menu_catalog" model="ir.ui.menu">
+			<field eval="[(6, 0, [ref('sales_team.group_sale_salesman'), ref('inbest_security_rules.inbest_customer_service_group')])]" name="groups_id"/>
+		</record>
+
         <record id="sale.menu_product_pricelist_main" model="ir.ui.menu">
-			<field eval="[(6, 0, [ref('sales_team.group_sale_manager')])]" name="groups_id"/>
+			<field eval="[(6, 0, [ref('sales_team.group_sale_manager'), ref('product.group_product_pricelist')])]" name="groups_id"/>
 		</record>
 
         <record id="purchase.menu_purchase_root" model="ir.ui.menu">
@@ -98,8 +102,34 @@
 	<record id="crm.crm_menu_config" model="ir.ui.menu">
         <field eval="[(4, ref('inbest_security_rules.inbest_crm_user_group'))]" name="groups_id"/>
     </record>
+<!--  Permiso para Atención al cliente  -->
+	<record id="crm.crm_lead_menu_my_activities" model="ir.ui.menu">
+        <field eval="[(4, ref('inbest_security_rules.inbest_customer_service_group'))]" name="groups_id"/>
+    </record>
 
+	<record id="crm.sales_team_menu_team_pipeline" model="ir.ui.menu">
+        <field eval="[(4, ref('inbest_security_rules.inbest_customer_service_group'))]" name="groups_id"/>
+    </record>
 
+	<record id="crm.crm_config_settings_menu" model="ir.ui.menu">
+        <field eval="[(4, ref('inbest_security_rules.inbest_customer_service_group'))]" name="groups_id"/>
+    </record>
+
+	<record id="crm.crm_recurring_plan_menu_config" model="ir.ui.menu">
+        <field eval="[(4, ref('inbest_security_rules.inbest_customer_service_group'))]" name="groups_id"/>
+    </record>
+
+	<record id="crm.menu_crm_config_lead" model="ir.ui.menu">
+        <field eval="[(4, ref('inbest_security_rules.inbest_customer_service_group'))]" name="groups_id"/>
+    </record>
+
+	<record id="crm.menu_crm_lead_categ" model="ir.ui.menu">
+        <field eval="[(4, ref('inbest_security_rules.inbest_customer_service_group'))]" name="groups_id"/>
+    </record>
+
+	<record id="crm.menu_crm_lost_reason" model="ir.ui.menu">
+        <field eval="[(4, ref('inbest_security_rules.inbest_customer_service_group'))]" name="groups_id"/>
+    </record>
 
     </data>
 </odoo>

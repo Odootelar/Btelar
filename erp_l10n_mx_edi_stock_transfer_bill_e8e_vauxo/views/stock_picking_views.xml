@@ -54,4 +54,19 @@
             </button>
         </field>
     </record>
+
+    <record id="view_picking_form_inherit_invoice" model="ir.ui.view">
+        <field name="name">stock.picking.form.invoice.ddt</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='%(stock.action_report_delivery)d']" position="replace">
+                <button name="button_print" string="Imprimir" attrs="{'invisible': [('state', '!=', 'done')]}" type="object" groups="base.group_user"/>
+            </xpath>
+            <xpath expr="//field[@name='move_ids_without_package']//tree/field[@name='quantity_done']" position="after">
+                <field name="cost_destiny_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+   </record>
+
 </odoo>

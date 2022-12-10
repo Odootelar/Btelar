@@ -10,6 +10,7 @@
     "data": [
         'views/sale_views.xml',
         'views/purchase_views.xml',
+        'views/product_views.xml',
         'views/stock_picking_views.xml',
         'views/account_move_views.xml',
         'security/security_data.xml',

@@ -4,18 +4,240 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0+e-20220326\n"
+"Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-10 16:51+0000\n"
-"PO-Revision-Date: 2022-11-10 10:53-0600\n"
+"POT-Creation-Date: 2022-12-05 15:33+0000\n"
+"PO-Revision-Date: 2022-12-05 09:34-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: es\n"
+"Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model:ir.actions.report,print_report_name:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.action_report_delivery_to_invoice
+msgid "'Invoice - %s - %s' % (object.partner_id.name or '', object.name)"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<br/>\n"
+"                                    <span>C.P:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<br/>\n"
+"                                    <span>Localidad:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<br/>\n"
+"                                    <span>Lugar de expedición:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<br/>\n"
+"                                    <span>Régimen Fiscal:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<br/>\n"
+"                                    <strong>Fecha:</strong>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<br/>\n"
+"                                    <strong>Uso de CFDI:</strong> Gastos en General<br/>\n"
+"                                    <strong>Pedido:</strong>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<br/>\n"
+"                                    R.F.C:"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid ""
+"<br/>\n"
+"                        <strong>CERO PESOS 00/100 M.N</strong>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span class=\"text-nowrap\">0.00</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid ""
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Monto</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Cantidad</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Certificado emisor:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid "<span>Colonia:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Complemento de cadena original de certificación digital SAT</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Código de producto</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Código de unidad</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Desc.%</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Descripción</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Información extra</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Sello digital SAT</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Sello digital del emisor</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Taxes</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid "<span>Teléfono:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>Unit Price</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>| Certificado SAT:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>| Fecha de certificación:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>| Fecha de emisión:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>| Folio Fiscal:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>| Lugar de expedición:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<span>| Régimen Fiscal:</span>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<strong style=\"font-size: 14px;\">Observaciones:</strong>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid ""
+"<strong>CLIENTE:</strong>\n"
+"                            <br/>\n"
+"                            R.F.C:"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<strong>Comprobante fiscal digital:</strong> (T)Traslado<br/>\n"
+"                                    <strong>Serie:</strong> TRAS <br/>\n"
+"                                    <strong>Folio:</strong>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid ""
+"<strong>DOMICILIO FISCAL:</strong>\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<strong>Este documento es una representación impresa de un CFDI</strong>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<strong>Subtotal</strong>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "Barcode"
+msgstr ""
 
 #. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
 #: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.erp_mx_edi_view_picking_edi_form
@@ -23,10 +245,16 @@ msgid "Cancel Transfer Invoice"
 msgstr "Cancelar factura de traslado"
 
 #. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_move__cost_destiny_ids
+msgid "Cost Destiny"
+msgstr "Costo en destino"
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_move__display_name
 #: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_picking__display_name
 #: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_picking_type__display_name
 msgid "Display Name"
-msgstr "Nombre Mostrado"
+msgstr "Nombre en pantalla"
 
 #. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
 #: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_picking_type__fiscal_regime_rfc_generic_invoice_transfer
@@ -39,16 +267,43 @@ msgid "Generic RFC for Invoice transfer"
 msgstr "RFC Genérico para Traslado de Facturas"
 
 #. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid "Guadalajara, Jalisco."
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_move__id
 #: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_picking__id
 #: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_picking_type__id
 msgid "ID"
 msgstr ""
 
 #. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.view_picking_form_inherit_invoice
+msgid "Imprimir"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model:ir.actions.report,name:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.action_report_delivery_to_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_move____last_update
 #: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_picking____last_update
 #: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_picking_type____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid "Logo"
+msgstr ""
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.imbest_external_layout_standard
+msgid "No.:"
+msgstr ""
 
 #. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
 #: model:ir.model,name:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.model_stock_picking_type
@@ -60,6 +315,11 @@ msgstr "Tipo de recolección"
 #, python-format
 msgid "Please select contact for document!"
 msgstr "¡Seleccione el contacto para el documento!"
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model:ir.model,name:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de stock"
 
 #. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
 #: model:ir.model,name:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.model_stock_picking
@@ -80,3 +340,10 @@ msgstr "Usar en factura de traslado"
 #: model:ir.model.fields,field_description:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.field_stock_picking_type__l10n_mx_invoice_internal_transfer
 msgid "Use on Invoice transfer"
 msgstr "Usar en factura de traslado"
+
+#. module: erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo
+#: model_terms:ir.ui.view,arch_db:erp_l10n_mx_edi_stock_transfer_bill_e8e_vauxo.report_delivery_to_invoice_document
+msgid ""
+"__________________________________________<br/>\n"
+"                                 Nombre y Firma"
+msgstr ""

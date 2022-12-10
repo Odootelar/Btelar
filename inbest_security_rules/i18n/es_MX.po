@@ -30,9 +30,19 @@ msgid ""
 msgstr ""
 
 #. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_customer_service_group
+msgid "Atención a Clientes"
+msgstr ""
+
+#. module: inbest_security_rules
 #: model:res.groups,name:inbest_security_rules.group_account_bill_collector
 msgid "Bill collector"
 msgstr "Crédito y cobranza"
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_crm_user_group
+msgid "CRM User"
+msgstr "Usuario CRM"
 
 #. module: inbest_security_rules
 #: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
@@ -81,6 +91,12 @@ msgid "ID"
 msgstr ""
 
 #. module: inbest_security_rules
+#: model:ir.model,name:inbest_security_rules.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: inbest_security_rules
+#: model:ir.model.fields,field_description:inbest_security_rules.field_account_move____last_update
 #: model:ir.model.fields,field_description:inbest_security_rules.field_purchase_order____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
@@ -98,7 +114,7 @@ msgstr ""
 #. module: inbest_security_rules
 #: model:res.groups,name:inbest_security_rules.inbest_expense_group
 msgid "Permiso Expense"
-msgstr ""
+msgstr "Permiso Gastos"
 
 #. module: inbest_security_rules
 #: model:res.groups,name:inbest_security_rules.inbest_hr_group
@@ -106,9 +122,29 @@ msgid "Permiso HR"
 msgstr ""
 
 #. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_group_account_user
+msgid "Permission Accounting"
+msgstr "Premiso Contabilidad"
+
+#. module: inbest_security_rules
 #: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
 msgid "Print RFQ"
 msgstr "Imprimir SdP"
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.group_stock_read_product_button_box
+msgid "Puede ver caja de botones Productos"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.group_stock_read_product_cost
+msgid "Puede ver precio de costo"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.group_stock_read_product_price
+msgid "Puede ver precios venta"
+msgstr ""
 
 #. module: inbest_security_rules
 #: model:ir.model,name:inbest_security_rules.model_purchase_order
@@ -119,6 +155,11 @@ msgstr "Orden de compra"
 #: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
 msgid "Re-Send by Email"
 msgstr "Reenviar por correo electrónico"
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.group_stock_user_only_product
+msgid "Read only product"
+msgstr "Solo leer productos"
 
 #. module: inbest_security_rules
 #: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
@@ -148,36 +189,35 @@ msgstr ""
 
 #. module: inbest_security_rules
 #: model:res.groups,name:inbest_security_rules.inbest_group_partner_user
-msgid "Solo crear y consultar contactos"
+msgid "Solo consultar contactos"
 msgstr ""
 
 #. module: inbest_security_rules
-#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
-msgid "Unlock"
-msgstr "Desbloquear"
-
-#. module: inbest_security_rules
-#: model:res.groups,name:inbest_security_rules.group_purchase_user_restrict
-#: model:res.groups,name:inbest_security_rules.group_stock_user_restrict
-msgid "User restrict"
-msgstr "Usuario restringido"
-
-#. module: inbest_security_rules
-#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
-msgid "Void Transaction"
+#: model:res.groups,name:inbest_security_rules.inbest_group_sale_user_read_only
+msgid "Solo consultar cotizaciones"
 msgstr ""
 
 #. module: inbest_security_rules
-#: model:res.groups,name:inbest_security_rules.group_stock_user_only_product
-msgid "Read only product"
-msgstr "Solo leer productos"
+#: model:res.groups,name:inbest_security_rules.inbest_group_partner_user_only_create
+msgid "Solo crear contactos"
+msgstr ""
 
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_group_sale_user
+msgid "Solo crear cotizaciones"
+msgstr ""
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_group_sale_user_edit
+msgid "Solo editar cotizaciones"
+msgstr ""
 
 #. module: inbest_security_rules
 #: code:addons/inbest_security_rules/models/account_move.py:0
 #, python-format
 msgid "The Bill/Refund date is required to validate this document."
-msgstr "Se requiere la fecha de Facturación / Reembolso para validar este documento."
+msgstr ""
+"Se requiere la fecha de Facturación / Reembolso para validar este documento."
 
 #. module: inbest_security_rules
 #: code:addons/inbest_security_rules/models/account_move.py:0
@@ -191,7 +231,8 @@ msgstr "El asiento %s (id %s) ya está publicado."
 msgid ""
 "The field 'Customer' is required, please complete it to validate the "
 "Customer Invoice."
-msgstr "El campo 'Cliente' es obligatorio, complétalo para validar la factura del "
+msgstr ""
+"El campo 'Cliente' es obligatorio, complétalo para validar la factura del "
 "cliente."
 
 #. module: inbest_security_rules
@@ -200,7 +241,8 @@ msgstr "El campo 'Cliente' es obligatorio, complétalo para validar la factura d
 msgid ""
 "The field 'Vendor' is required, please complete it to validate the Vendor "
 "Bill."
-msgstr "El campo 'Proveedor' es obligatorio, complétalo para validar la factura del "
+msgstr ""
+"El campo 'Proveedor' es obligatorio, complétalo para validar la factura del "
 "proveedor."
 
 #. module: inbest_security_rules
@@ -241,6 +283,27 @@ msgstr ""
 #, python-format
 msgid "This move will be posted at the accounting date: %(date)s"
 msgstr "Este movimiento se publicará en la fecha contable: %(date)s"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.purchase_order_view_form_inherit
+msgid "Unlock"
+msgstr "Desbloquear"
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.group_purchase_user_restrict
+#: model:res.groups,name:inbest_security_rules.group_stock_user_restrict
+msgid "User restrict"
+msgstr "Usuario restringido"
+
+#. module: inbest_security_rules
+#: model_terms:ir.ui.view,arch_db:inbest_security_rules.view_order_form_secuity_inherit
+msgid "Void Transaction"
+msgstr "Transacción anulada"
+
+#. module: inbest_security_rules
+#: model:res.groups,name:inbest_security_rules.inbest_group_user_warehouse
+msgid "Warehouse"
+msgstr "Almacén"
 
 #. module: inbest_security_rules
 #: code:addons/inbest_security_rules/models/account_move.py:0
