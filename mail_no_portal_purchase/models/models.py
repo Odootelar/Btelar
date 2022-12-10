@@ -3,8 +3,8 @@
 from odoo import models, fields, api
 
 
-class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+class PurchaseOrder(models.Model):
+    _inherit = 'purchase.order'
 
     def get_access_action(self, access_uid=None):
         return {}

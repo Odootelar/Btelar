@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "mail_no_portal",
+    'name': "mail_no_portal_purchase",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale_management','account'],
+    'depends': ['purchase','account'],
 
     # always loaded
     'data': [
