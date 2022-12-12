@@ -64,7 +64,9 @@
                 <button name="button_print" string="Imprimir" attrs="{'invisible': [('state', '!=', 'done')]}" type="object" groups="base.group_user"/>
             </xpath>
             <xpath expr="//field[@name='move_ids_without_package']//tree/field[@name='quantity_done']" position="after">
-                <field name="cost_destiny_ids" widget="many2many_tags"/>
+                <field name="cost_destiny_ids" widget="many2many_tags"
+                       attrs="{'invisible':[('parent.l10n_mx_invoice_internal_transfer', '=', False)],
+                               'column_invisible': [('parent.l10n_mx_invoice_internal_transfer', '=', False)]}"/>
             </xpath>
         </field>
    </record>
